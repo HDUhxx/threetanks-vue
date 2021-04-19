@@ -35,24 +35,24 @@
         <img v-if="singnalbiaodashi1 == 2" src="../../assets2/拟合表达式1+new.png" style="position: absolute;left: 34%;top: 51%;"/>
 
       <v-flex style="position: absolute;left: 18%;top:82%;width: 120px;" >
-        <v-col cols="12" sm="6" md="3" ><h2 style="color: white;">K1:</h2>
+        <v-col cols="12" sm="6" md="3" ><h2 style="color: white;font-size: 150%;">K1:</h2>
           <el-input v-model="k1" placeholder="K1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 25%;top:82%;width: 120px">
-        <v-col cols="12" sm="6" md="3" ><h2 style="color: white;">T1:</h2>
+        <v-col cols="12" sm="6" md="3" ><h2 style="color: white;font-size: 150%;">T1:</h2>
           <el-input v-model="a1" placeholder="T1" class="te"></el-input>
         </v-col>
       </v-flex>
         <v-flex style="position: absolute;left: 32%;top:82%;width: 120px">
-          <v-col cols="12" sm="6" md="3" ><h2 style="color: white;">τ1:</h2>
+          <v-col cols="12" sm="6" md="3" ><h2 style="color: white;font-size: 150%;">τ1:</h2>
             <el-input v-model="tao1" placeholder="T1" class="te"></el-input>
           </v-col>
         </v-flex>
 
-        <v-flex style="position: absolute;left: 80%;top:70%;width: 120px;" >
-          <v-col cols="12" sm="6" md="3" ><h2 style="color: white;">初始水位设定:</h2>
-            <el-input-number style="background-color: unset" v-model="set1" controls-position="right" @change="handleChange" :min="1" :max="200"></el-input-number>
+        <v-flex style="position: absolute;left: 80%;top:70%;width: 140px;" >
+          <v-col cols="12" sm="6" md="3" ><h4 style="color: white;font-size: 150%;">初始水位设定:</h4>
+            <el-input-number style="background-color: unset" class="te" v-model="set1" controls-position="right" @change="handleChange" :min="1" :max="200"></el-input-number>
             <!--<el-input v-model="set1" class="te"></el-input>-->
           </v-col>
         </v-flex>

@@ -26,19 +26,19 @@
 
       <v-flex style="position: absolute;left:67%;top:63%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">K1:</h2>
+          <h2 style="color: white;font-size: 150%;">K1:</h2>
           <el-input v-model="k1" placeholder="k1" label="k1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 74%;top:63%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">T1:</h2>
+          <h2 style="color: white;font-size: 150%;">T1:</h2>
           <el-input v-model="a1" placeholder="a1" label="a1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 81%;top:63%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">τ:</h2>
+          <h2 style="color: white;font-size: 150%;">τ:</h2>
           <el-input  v-model="ta" placeholder="τ" class="te"></el-input>
         </v-col>
       </v-flex>
@@ -61,38 +61,38 @@
 
       <v-flex style="position: absolute;left: 68%;top:78%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Kp:</h2>
+          <h2 style="color: white;font-size: 150%;">Kp:</h2>
           <el-input v-model="kp" placeholder="kp" label="kp" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 75%;top:78%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Ki:</h2>
+          <h2 style="color: white;font-size: 150%;">Ki:</h2>
           <el-input v-model="ki" placeholder="ki" label="ki" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 82%;top:78%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Kd:</h2>
+          <h2 style="color: white;font-size: 150%;">Kd:</h2>
           <el-input v-model="kd" placeholder="kd" label="kd" class="te"></el-input>
         </v-col>
       </v-flex>
 
       <v-flex style="position: absolute;left: 68%;top:86%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">R:</h2>
+          <h2 style="color: white;font-size: 150%;">R:</h2>
           <el-input v-model="R" placeholder="R" label="R" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 75%;top:86%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">T:</h2>
+          <h2 style="color: white;font-size: 150%;">T:</h2>
           <el-input v-model="T" placeholder="T" label="T" class="te"></el-input>
         </v-col>
       </v-flex>
 
       <el-checkbox v-model="checked"  style="position: absolute;left: 82%;top: 90%;" class=" te">
-        <h2 style="color: white;">Smith预估控制器</h2>
+        <h2 style="color: white;font-size: 150%;">Smith预估控制器</h2>
       </el-checkbox>
 
 
@@ -111,7 +111,7 @@
       </div>
       <v-flex style="position: absolute;left: 75%;top:25%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">液位/mm</h2>
+          <h2 style="color: white;font-size: 150%;">液位/mm</h2>
           <el-input v-model="value" class="te" ></el-input>
         </v-col>
       </v-flex>

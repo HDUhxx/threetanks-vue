@@ -19,8 +19,11 @@
 
       <iframe v-if="flaghelp == true" :src="url2" frameborder="0" style="position:absolute;width: 50%; height:43%;left:25%;top: 30%"></iframe>
 
+      <div>
+        <iframe src="http://nat.gzn0927.top/vnc.html" id="mobsf" scrolling="no" frameborder="0" style="position:absolute;top:10%;left:7%;right:0px;bottom:100px;"></iframe>
+      </div>
 
-      <div class="crumbs" style="position: absolute;left: 25%;top: 18%;">
+<!--      <div class="crumbs" style="position: absolute;left: 25%;top: 18%;">
         <v-card style="background-color: 	#E6E6FA">
           <v-card-title align="center"><span><h2>虚实结合的计算机控制虚拟仿真实验</h2></span></v-card-title>
           <v-card-text align="left">
@@ -40,12 +43,29 @@
             <span><h3>14.	实验过程中，可以打开上方的视频监控按钮，可以观察到实体水箱的液位变化情况。</h3> </span><br/>
             <span><h3>15.	结束实验时，先点击暂停按钮，等待1分钟左右，点击停止按钮，停止实验。</h3></span><br/>
             <span><h3>16.	停止实验结束后可以再次点击新建实验，选择实验进行实验。</h3></span><br/>
-<!--
+&lt;!&ndash;
             <a :href ="'60.12.8.188:13389'" ><span>本地实验</span></a>
--->
+&ndash;&gt;
           </v-card-text>
         </v-card>
-      </div>
+      </div>-->
+      <!--<el-button style="position: absolute;left: 40%;top: 40%;">
+        <a :href ="'http://192.168.130.41:9000/vnc.html'" >
+          <span>跳转到本地实验</span>
+        </a>
+      </el-button>-->
+
+
+      <!--<div class="crumbs1" style="position: absolute;left: 40%;top: 40%;width: 300px;height: 100px">
+        <v-card style="background-color: white">
+          &lt;!&ndash;<v-card-title><h3 style="font-size: 150%;">本地实验地址</h3></v-card-title>&ndash;&gt;
+          <v-card-text align="center">
+            <a :href ="'http://192.168.130.41:9000/vnc.html'" ><span style="color: blue">跳转到本地实验</span></a>
+          </v-card-text>
+        </v-card>
+      </div>-->
+
+
       <!--<div class="page-home" ref="canvas">
         <canvas id="noVNC_canvas" width="800" height="600">
           Canvas not supported.
@@ -90,6 +110,24 @@
       /*mounted(){
         this.connectVNC();
       },*/
+    mounted(){
+      /**
+       * iframe-宽高自适应显示
+       */
+      function changeMobsfIframe(){
+        const mobsf = document.getElementById('mobsf');
+        const deviceWidth = document.body.clientWidth;
+        const deviceHeight = document.body.clientHeight;
+        mobsf.style.width = (Number(deviceWidth)-240) + 'px'; //数字是页面布局宽度差值
+        mobsf.style.height = (Number(deviceHeight)-64) + 'px'; //数字是页面布局高度差
+      }
+
+      changeMobsfIframe()
+
+      window.onresize = function(){
+        changeMobsfIframe()
+      }
+    },
       methods:{
         // 远程桌面连接成功后的回调函数
         /*_onCompleteHandler (rfb, fbu) {

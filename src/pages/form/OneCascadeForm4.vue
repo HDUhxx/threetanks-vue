@@ -27,19 +27,19 @@
       <img v-if="false" src="../../assets2/公式1+tao.png" style="position: absolute;left: 69%;top: 57%;"/>
       <v-flex style="position: absolute;left: 67%;top:63%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">K1:</h2>
+          <h2 style="color: white;font-size: 150%;">K1:</h2>
           <el-input v-model="k1" placeholder="k1" label="k1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 74%;top:63%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">T1:</h2>
+          <h2 style="color: white;font-size: 150%;">T1:</h2>
           <el-input v-model="a1" placeholder="a1" label="a1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 81%;top:63%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">τ1:</h2>
+          <h2 style="color: white;font-size: 150%;">τ1:</h2>
           <el-input v-model="ta" placeholder="τ" class="te"></el-input>
         </v-col>
       </v-flex>
@@ -193,43 +193,43 @@
       </v-dialog>
       <v-flex style="position: absolute;left: 68%;top:78%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Kp:</h2>
+          <h2 style="color: white;font-size: 150%;">Kp:</h2>
           <el-input v-model="kp" placeholder="kp" label="kp" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 75%;top:78%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Ki:</h2>
+          <h2 style="color: white;font-size: 150%;">Ki:</h2>
           <el-input v-model="ki" placeholder="ki" label="ki" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 82%;top:78%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Kd:</h2>
+          <h2 style="color: white;font-size: 150%;">Kd:</h2>
           <el-input v-model="kd" placeholder="kd" label="kd" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 89%;top:78%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Kp1:</h2>
+          <h2 style="color: white;font-size: 150%;">Kp1:</h2>
           <el-input v-model="kp1" placeholder="kp1" label="kp1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 68%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Ki1:</h2>
+          <h2 style="color: white;font-size: 150%;">Ki1:</h2>
           <el-input v-model="ki1" placeholder="ki1" label="ki1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 75%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">R:</h2>
+          <h2 style="color: white;font-size: 150%;">R:</h2>
           <el-input v-model="R" placeholder="R" label="R" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 82%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">T:</h2>
+          <h2 style="color: white;font-size: 150%;">T:</h2>
           <el-input v-model="T" placeholder="T" label="T" class="te"></el-input>
         </v-col>
       </v-flex>
@@ -249,7 +249,7 @@
       </div>
       <v-flex style="position: absolute;left: 75%;top:25%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">液位/mm</h2>
+          <h2 style="color: white;font-size: 150%;">液位/mm</h2>
           <el-input v-model="value" class="te" ></el-input>
         </v-col>
       </v-flex>
@@ -290,8 +290,19 @@
       <span v-show="timesT>7" style="position:absolute;left:80%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃▃▃</span>
       <span v-show="timesT>7" style="position:absolute;left:85%;top: 12%;font-size:30px; color:#4cb9fc">▃</span>
       <span v-show="timesT>7" style="position:absolute;left:85.5%;top: 12%;font-size:30px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>0" style="position:absolute;left:86%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃▃▃</span>
+      <span v-show="timesT>0" style="position:absolute;left:90%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃▃</span>
+      <span v-show="timesT>0" style="position:absolute;left:93%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃▃</span>
 
-      <span v-show="timesT>7" style="position:absolute;left:84.5%;top: 14.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>
+
+      <span v-show="timesT>1" style="position:absolute;left:84.5%;top: 14.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>
+      <!--<span v-show="timesT>1" style="position:absolute;left:84.5%;top: 37.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>
+      <span v-show="timesT>1" style="position:absolute;left:84.5%;top: 43.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>-->
+      <span v-show="timesT>7" style="position:absolute;left:85.9%;top: 35.8%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:85.9%;top: 36.9%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:85.9%;top: 41.5%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:85.9%;top: 42.5%;font-size:25px; color:#4cb9fc">▃</span>
+
     </v-layout>
   </v-container>
 </template>

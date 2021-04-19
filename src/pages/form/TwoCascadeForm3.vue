@@ -304,7 +304,7 @@
       <div class="px2" ref="chartOne"  style="position: absolute;left: 18%;top:10%;width: 800px;height:400px"></div>
 
       <v-btn @click="dialog2 = true" style="background: #FF8C00;z-index: 9" class="disturb1">请输入干扰1</v-btn>
-      <v-btn @click="dialog1 = true" style="background: #FF8C00;z-index: 9" class="disturb2">请输入干扰2</v-btn>
+      <v-btn @click="dialog1 = true" style="background: #FF8C00;z-index: 9;position: absolute;top: 17%;left: 92%;" >请输入干扰2</v-btn>
 
 
     </v-layout>
@@ -860,10 +860,10 @@
     left: 92%;
     top: 13%;
   }
-  .disturb2{
+  /*.disturb2{
     position: absolute;
     left: 92%;
-    top: 19%;
-  }
+    top: 18%;
+  }*/
 
 </style>

@@ -28,19 +28,19 @@
       <img v-if="false" src="../../assets2/公式1+tao.png" style="position: absolute;left: 69%;top: 58%;"/>
       <v-flex style="position: absolute;left:67%;top:63%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">K1:</h2>
+          <h2 style="color: white;font-size: 150%;">K1:</h2>
           <el-input v-model="k1" placeholder="k1" label="k1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 74%;top:63%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">T1:</h2>
+          <h2 style="color: white;font-size: 150%;">T1:</h2>
           <el-input v-model="a1" placeholder="a1" label="a1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 81%;top:63%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">τ1:</h2>
+          <h2 style="color: white;font-size: 150%;">τ1:</h2>
           <el-input v-model="ta" placeholder="τ" class="te"></el-input>
         </v-col>
       </v-flex>
@@ -196,72 +196,72 @@
         </v-card>
       </v-dialog>
 
-      <v-flex style="position: absolute;left: 68%;top:75%;width: 120px">
+      <v-flex style="position: absolute;left: 68%;top:71%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">有干扰加前馈Kp1:</h2>
+          <h2 style="color: white;font-size: 150%;">有干扰加前馈Kp1:</h2>
           <el-input v-model="kp1" placeholder="kp1"  class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 75%;top:75%;width: 120px">
+      <v-flex style="position: absolute;left: 75%;top:71%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">有干扰加前馈Ki1:</h2>
+          <h2 style="color: white;font-size: 150%;">有干扰加前馈Ki1:</h2>
           <el-input v-model="ki1" placeholder="ki1" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 82%;top:75%;width: 120px">
+      <v-flex style="position: absolute;left: 82%;top:71%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">有干扰加前馈Kd1:</h2>
+          <h2 style="color: white;font-size: 150%;">有干扰加前馈Kd1:</h2>
           <el-input v-model="kd1" placeholder="kd1" class="te"></el-input>
         </v-col>
       </v-flex>
 
-      <v-flex style="position: absolute;left: 68%;top:82%;width: 120px">
+      <v-flex style="position: absolute;left: 68%;top:81%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">无干扰Kp10:</h2>
+          <h2 style="color: white;font-size: 150%;">无干扰Kp10:</h2>
           <el-input v-model="kp10" placeholder="kp10" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 75%;top:82%;width: 120px">
+      <v-flex style="position: absolute;left: 75%;top:81%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">无干扰Ki10:</h2>
+          <h2 style="color: white;font-size: 150%;">无干扰Ki10:</h2>
           <el-input v-model="ki10" placeholder="ki10" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 82%;top:82%;width: 120px">
+      <v-flex style="position: absolute;left: 82%;top:81%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">无干扰Kd10:</h2>
+          <h2 style="color: white;font-size: 150%;">无干扰Kd10:</h2>
           <el-input v-model="kd10" placeholder="kd10" class="te"></el-input>
         </v-col>
       </v-flex>
 
-      <v-flex style="position: absolute;left: 68%;top:89%;width: 120px">
+      <v-flex style="position: absolute;left: 68%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">有干扰不加前馈Kp0:</h2>
+          <h2 style="color: white;font-size: 150%;">有干扰不加前馈Kp0:</h2>
           <el-input v-model="kp0" placeholder="kp0"  class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 75%;top:89%;width: 120px">
+      <v-flex style="position: absolute;left: 75%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">有干扰不加前馈Ki0:</h2>
+          <h2 style="color: white;font-size: 150%;">有干扰不加前馈Ki0:</h2>
           <el-input v-model="ki0" placeholder="ki0" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 82%;top:89%;width: 120px">
+      <v-flex style="position: absolute;left: 82%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">有干扰不加前馈Kd0:</h2>
+          <h2 style="color: white;font-size: 150%;">有干扰不加前馈Kd0:</h2>
           <el-input v-model="kd0" placeholder="kd0" class="te"></el-input>
         </v-col>
       </v-flex>
 
       <v-flex style="position: absolute;left: 89%;top:82%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">R:</h2>
+          <h2 style="color: white;font-size: 150%;">R:</h2>
           <el-input v-model="R" placeholder="R" label="R" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 89%;top:75%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">T:</h2>
+          <h2 style="color: white;font-size: 150%;">T:</h2>
           <el-input v-model="T" placeholder="T" label="T" class="te"></el-input>
         </v-col>
       </v-flex>
@@ -283,7 +283,7 @@
       </div>
       <v-flex style="position: absolute;left: 75%;top:25%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">液位/mm</h2>
+          <h2 style="color: white;font-size: 150%;">液位/mm</h2>
           <el-input v-model="value" class="te" ></el-input>
         </v-col>
       </v-flex>
@@ -324,8 +324,18 @@
       <span v-show="timesT>7" style="position:absolute;left:80%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃▃▃</span>
       <span v-show="timesT>7" style="position:absolute;left:85%;top: 12%;font-size:30px; color:#4cb9fc">▃</span>
       <span v-show="timesT>7" style="position:absolute;left:85.5%;top: 12%;font-size:30px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>0" style="position:absolute;left:86%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃▃▃</span>
+      <span v-show="timesT>0" style="position:absolute;left:90%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃▃</span>
+      <span v-show="timesT>0" style="position:absolute;left:93%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃▃</span>
 
-      <span v-show="timesT>7" style="position:absolute;left:84.5%;top: 14.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>
+
+      <span v-show="timesT>1" style="position:absolute;left:84.5%;top: 14.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>
+      <!--<span v-show="timesT>1" style="position:absolute;left:84.5%;top: 37.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>
+      <span v-show="timesT>1" style="position:absolute;left:84.5%;top: 43.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>-->
+      <span v-show="timesT>7" style="position:absolute;left:85.9%;top: 35.8%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:85.9%;top: 36.9%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:85.9%;top: 41.5%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:85.9%;top: 42.5%;font-size:25px; color:#4cb9fc">▃</span>
     </v-layout>
   </v-container>
 </template>

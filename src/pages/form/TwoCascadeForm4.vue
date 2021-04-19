@@ -20,31 +20,31 @@
       <img  src="../../assets2/按钮复杂控制点击.png" v-on:mouseleave="changetag52" style="position: absolute; left: 3%;top: 60%;" onclick="location='/#/form/two-cascade-form4'"/>
       <img   src="../../assets2/按钮算法设计.png" v-on:mouseleave="changetag12" style="position: absolute; left: 3%;top: 66%;" onclick="location='/#/form/write-form4'"/>
 
-      <img  src="../../assets2/二阶有干扰水箱.png" style="position: absolute;left: 62%;top: 8%;"/>
+      <img  src="../../assets2/二阶有干扰水箱.png" style="position: absolute;left: 60%;top: 8%;"/>
       <img src="../../assets2/框图3.png" style="position: absolute;left: 14.5%;top:60%;"/>
 
 
       <v-flex style="position: absolute;left:69%;top:63%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">K1:</h2>
+          <h2 style="color: white;font-size: 150%;">K1:</h2>
           <el-input v-model="k1" placeholder="k1" label="k1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 76%;top:63%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">T1:</h2>
+          <h2 style="color: white;font-size: 150%;">T1:</h2>
           <el-input v-model="a1" placeholder="a1" label="a1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 69%;top:70%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">K2:</h2>
+          <h2 style="color: white;font-size: 150%;">K2:</h2>
           <el-input v-model="k2" placeholder="k2" label="k2" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 76%;top:70%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">T2:</h2>
+          <h2 style="color: white;font-size: 150%;">T2:</h2>
           <el-input v-model="a2" placeholder="a2" label="a2" class="te"></el-input>
         </v-col>
       </v-flex>
@@ -203,87 +203,142 @@
 
       <v-flex style="position: absolute;left: 68%;top:78%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Kp:</h2>
+          <h2 style="color: white;font-size: 150%;">Kp:</h2>
           <el-input v-model="kp" placeholder="kp" label="kp" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 75%;top:78%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Ki:</h2>
+          <h2 style="color: white;font-size: 150%;">Ki:</h2>
           <el-input v-model="ki" placeholder="ki" label="ki" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 82%;top:78%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Kd:</h2>
+          <h2 style="color: white;font-size: 150%;">Kd:</h2>
           <el-input v-model="kd" placeholder="kd" label="kd" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 89%;top:78%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Kp1:</h2>
+          <h2 style="color: white;font-size: 150%;">Kp1:</h2>
           <el-input v-model="kp1" placeholder="kp1" label="kp1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 68%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">Ki1:</h2>
+          <h2 style="color: white;font-size: 150%;">Ki1:</h2>
           <el-input v-model="ki1" placeholder="ki1" label="ki1" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 75%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">R:</h2>
+          <h2 style="color: white;font-size: 150%;">R:</h2>
           <el-input v-model="R" placeholder="R" label="R" class="te"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 82%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;">T:</h2>
+          <h2 style="color: white;font-size: 150%;">T:</h2>
           <el-input v-model="T" placeholder="T" label="T" class="te"></el-input>
         </v-col>
       </v-flex>
 
-      <!--<v-flex style="position: absolute;left: 67%;top: 69%;width: 10%;">
-        <el-select v-model="signal" placeholder="扰动选择" style="background: #000;">
-          <el-option
-            v-for="item in disturbOptions"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value">
-          </el-option>
-        </el-select>
-      </v-flex>
-      <v-flex v-if="signal == 1" style="position: absolute;left: 78%;top: 68%;">
-        <v-layout>
-          <img src="../../assets2/参数框蓝底.png" style="width: 120px;height: 40px;position: absolute;top: 13%;"/>
-          <v-flex><v-text-field placeholder="阶跃扰动值" v-model="disturbValue" clearable></v-text-field></v-flex>
-        </v-layout>
-      </v-flex>
-      <v-flex v-if="signal == 2" style="position: absolute;left: 78%;top: 68%;width: 20%;">
-        <v-layout>
-          <img src="../../assets2/参数框蓝底.png" style="width: 110px;height: 40px;position: absolute;top: 13%;left: 33%;"/>
-          <img src="../../assets2/参数框蓝底.png" style="width: 110px;height: 40px;position: absolute;top: 13%;left: 66%;"/>
-          <img src="../../assets2/参数框蓝底.png" style="width: 110px;height: 40px;position: absolute;top: 13%;"/>
-          <v-flex><v-text-field placeholder="正弦扰动振幅" style="width: 100px" v-model="disturbValueA" clearable></v-text-field></v-flex>
-          <v-flex><v-text-field placeholder="正弦扰动频率" style="width: 100px" v-model="disturbValueW" clearable></v-text-field></v-flex>
-          <v-flex><v-text-field placeholder="正弦扰动相角" style="width: 100px" v-model="disturbValueF" clearable></v-text-field></v-flex>
-        </v-layout>
-      </v-flex>
-      <v-flex v-if="signal == 3" style="position: absolute;left: 78%;top: 68%;">
-        <v-layout>
-          <img src="../../assets2/参数框蓝底.png" style="width: 120px;height: 40px;position: absolute;top: 13%;"/>
-          <v-text-field placeholder="白噪声振幅" v-model="disturbValue" clearable></v-text-field>
-        </v-layout>
-      </v-flex>-->
       <iframe v-if="flaghelp == true" :src="url2" frameborder="0" style="position:absolute;width: 50%; height:43%;left:25%;top: 30%"></iframe>
       <img src="../../assets2/下载.png" style="position: absolute;left: 56.5%;top: 11.3%;"/>
       <div class="px2" ref="chartOne"  style="position: absolute;left: 18%;top:10%;width: 800px;height:400px"></div>
+      <div>
+        <el-slider
+          style="position: absolute;left: 75.4%;top: 25%;height: 120px;width: 50px;"
+          v-model="value"
+          :show-tooltip="true"
+          vertical
+          max="200">
+        </el-slider>
+      </div>
+      <v-flex style="position: absolute;left: 70%;top:25%;width: 120px;">
+        <v-col cols="12" sm="6" md="3" >
+          <h2 style="color: white;font-size: 150%;">液位/mm</h2>
+          <el-input v-model="value" class="te" ></el-input>
+        </v-col>
+      </v-flex>
+
+      <div>
+        <el-slider
+          style="position: absolute;left: 87.6%;top: 25%;height: 120px;width: 50px;"
+          v-model="value1"
+          :show-tooltip="true"
+          vertical
+          max="200">
+        </el-slider>
+      </div>
+      <v-flex style="position: absolute;left: 82%;top:25%;width: 120px;">
+        <v-col cols="12" sm="6" md="3" >
+          <h2 style="color: white;font-size: 150%;">液位/mm</h2>
+          <el-input v-model="value1" class="te" ></el-input>
+        </v-col>
+      </v-flex>
 
       <v-btn @click="dialog2 = true" style="background: #FF8C00;z-index: 9" class="disturb1">请输入干扰1</v-btn>
       <v-btn @click="dialog1 = true" style="background: #FF8C00;z-index: 9" class="disturb2">请输入干扰2</v-btn>
 
+      <span v-show="timesT>0" style="position:absolute;left: 64.3%;top: 50.9%;font-size:30px;line-height:30px; color:#4cb9fc"> ▃</span>
+      <span v-show="timesT>0" style="position:absolute;left: 62.9%;top: 50.9%;font-size:34px;line-height:30px; color:#4cb9fc"> ▃</span>
 
+      <span v-show="timesT>0" style="position:absolute;left:61.9%;top: 52.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:17px;line-height:0px;">▊</span>
+      <span v-show="timesT>0" style="position:absolute;left:62.2%;top: 52.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:17px;line-height:0px;">▊</span>
+
+      <span v-show="timesT>0" style="position:absolute;left:61.6%;top: 48.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>0" style="position:absolute;left:61.6%;top: 46%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>0" style="position:absolute;left:61.6%;top: 44%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>1" style="position:absolute;left:61.6%;top: 42%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>1" style="position:absolute;left:61.6%;top: 40%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>1" style="position:absolute;left:61.6%;top: 39%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+
+
+      <span v-show="timesT>3" style="position:absolute;left:61.6%;top: 30%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>3" style="position:absolute;left:61.6%;top: 28%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>3" style="position:absolute;left:61.6%;top: 26%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>4" style="position:absolute;left:61.6%;top: 24%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>4" style="position:absolute;left:61.6%;top: 22%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>4" style="position:absolute;left:61.6%;top: 20%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>5" style="position:absolute;left:61.6%;top: 18%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>5" style="position:absolute;left:61.6%;top: 17%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT>5" style="position:absolute;left:61.9%;top: 14%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:17px;line-height:30px;">▊</span>
+      <span v-show="timesT>5" style="position:absolute;left:62.2%;top: 14%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:17px;line-height:30px;">▊</span>
+
+      <span v-show="timesT>5" style="position:absolute;left:63%;top: 11.9%;font-size:30px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>6" style="position:absolute;left:64.3%;top: 11.9%;font-size:30px; color:#4cb9fc">▃▃▃</span>
+      <span v-show="timesT>6" style="position:absolute;left:66%;top: 11.9%;font-size:30px; color:#4cb9fc">▃▃▃▃</span>
+      <span v-show="timesT>6" style="position:absolute;left:69%;top: 11.9%;font-size:30px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>6" style="position:absolute;left:70.4%;top: 11.9%;font-size:30px; color:#4cb9fc">▃▃▃</span>
+
+      <span v-show="timesT>7" style="position:absolute;left:72%;top: 11.9%;font-size:30px; color:#4cb9fc">▃▃▃▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:74.7%;top: 11.9%;font-size:30px; color:#4cb9fc">▃▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:77%;top: 11.9%;font-size:30px; color:#4cb9fc">▃▃</span>
+      <span v-show="timesT>1" style="position:absolute;left:78.5%;top: 11.9%;font-size:30px; color:#4cb9fc">▃▃</span>
+      <span v-show="timesT>1" style="position:absolute;left:80.6%;top: 11.9%;font-size:30px; color:#4cb9fc">▃▃▃▃▃</span>
+      <span v-show="timesT>0" style="position:absolute;left:85%;top: 11.9%;font-size:30px; color:#4cb9fc">▃▃</span>
+      <span v-show="timesT>0" style="position:absolute;left:87.3%;top: 11.9%;font-size:30px; color:#4cb9fc">▃▃▃▃</span>
+      <span v-show="timesT>0" style="position:absolute;left:91%;top: 11.9%;font-size:30px; color:#4cb9fc">▃▃▃▃</span>
+
+      <!--水箱2干扰-->
+      <span v-show="timesT>0" style="position:absolute;left:90%;top: 16%;font-size:30px; color:#4cb9fc">▃▃▃▃</span>
+      <span v-show="timesT>1" style="position:absolute;left:88.4%;top: 18.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>
+
+
+      <span v-show="timesT>7" style="position:absolute;left:76.4%;top: 14.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>
+      <!--<span v-show="timesT>1" style="position:absolute;left:84.5%;top: 37.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>
+      <span v-show="timesT>1" style="position:absolute;left:84.5%;top: 43.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>-->
+      <!---->
+      <span v-show="timesT>7" style="position:absolute;left:78%;top: 35.8%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:78%;top: 36.9%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:78%;top: 41.5%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:78%;top: 42.5%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:90%;top: 35.8%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:90%;top: 36.9%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:90%;top: 41.5%;font-size:25px; color:#4cb9fc">▃</span>
+      <span v-show="timesT>7" style="position:absolute;left:90%;top: 42.5%;font-size:25px; color:#4cb9fc">▃</span>
     </v-layout>
   </v-container>
 </template>
@@ -299,6 +354,8 @@
         name: "TwoCascadeForm4",
     data() {
       return {
+        value:0,
+        value1:0,
         signalwater:1,
         dialog1:false,
         dialog2:false,
@@ -779,6 +836,8 @@
         for (let i = 0; i < this.timesT; i++) {
           this.xData.push(''+i);
           this.setData[i] = this.R;
+          this.value=resp[0][i];
+          this.value1=resp[1][i];
         }
         this.option.xAxis.data = this.xData;
         this.option.series[0].data=resp[0];
@@ -849,7 +908,28 @@
   .disturb2{
     position: absolute;
     left: 92%;
-    top: 19%;
+    top: 17%;
+  }
+
+</style>
+<style>
+  .el-slider__runway {
+    background-color: unset !important;
+  }
+  .el-slider__button {
+    width: 0px !important;
+    height: 0px !important;
+    border: 2px solid #409EFF;
+    background-color: #FFF;
+    border-radius: 50%;
+    -webkit-transition: .2s;
+    transition: .2s;
+    user-select: none;
+  }
+  .el-slider.is-vertical .el-slider__bar {
+    width: 80px !important;
+    height: auto;
+    border-radius: 0 0 3px 3px;
   }
 
 </style>

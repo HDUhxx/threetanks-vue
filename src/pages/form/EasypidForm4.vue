@@ -20,10 +20,10 @@
       <img  src="../../assets2/按钮复杂控制.png" v-on:mouseleave="changetag52" style="position: absolute; left: 3%;top: 60%;" onclick="location='/#/form/two-cascade-form4'"/>
       <img   src="../../assets2/按钮算法设计.png" v-on:mouseleave="changetag12" style="position: absolute; left: 3%;top: 66%;" onclick="location='/#/form/write-form4'"/>
 
-
       <img  src="../../assets2/一阶无干扰水箱.png" style="position: absolute;left: 62%;top: 8%;"/>
-      <img src="../../assets2/框图1.png" style="position: absolute;left: 15%;top:62%;"/>
+      <img  src="../../assets2/水泵.png" style="position: absolute;left: 68.3%;top: 50.8%;"/>
 
+      <img src="../../assets2/框图1.png" style="position: absolute;left: 15%;top:62%;"/>
 
       <img v-if="false" src="../../assets2/公式1+tao.png" style="position: absolute;left: 69%;top: 58%;"/>
 
@@ -82,7 +82,7 @@
       <v-flex style="position: absolute;left: 79%;top:85%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
           <h2 style="color: white;font-size: 150%;">R:</h2>
-          <el-input v-model="R" placeholder="R" label="R" class="te"></el-input>
+          <el-input v-model="R" placeholder="R" label="R" class="te" oninput="if(value>200)value=200"></el-input>
         </v-col>
       </v-flex>
       <v-flex style="position: absolute;left: 69%;top:85%;width: 120px;">
@@ -111,7 +111,7 @@
       <v-flex style="position: absolute;left: 75%;top:25%;width: 120px;">
         <v-col cols="24" sm="12" md="6" >
           <h4 style="color: white;font-size: 150%;">液位/mm</h4>
-          <el-input  v-model="value"  class="te" >{{value|numFilter}}</el-input>
+          <el-input  v-model="value"  class="te1" >{{value|numFilter}}</el-input>
         </v-col>
       </v-flex>
 
@@ -1038,7 +1038,13 @@
 
 <style scoped>
 
-
+  .te1>>>input
+  {
+    width: 100px;
+    color:white;
+    background-color: unset;
+    font-size:20px !important;
+  }
   .te>>>input
   {
     width: 80px;
