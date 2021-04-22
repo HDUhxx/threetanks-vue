@@ -3,10 +3,15 @@
     <v-layout row wrap >
       <v-flex>
         <v-card>
+<!--
           <img v-if="singnalshe != 2 " style="position:relative;display:block;margin:0 auto;width: 100%;max-width:100%; height:100%" src="../../assets2/背景1.png">
-          <img v-if="singnalshe == 2 " style="position:relative;display:block;margin:0 auto;width: 100%;max-width:100%; height:100%" src="../../assets2/背景2.png">
+-->
+          <!--<img v-if="singnalshe == 2 " style="position:relative;display:block;margin:0 auto;width: 100%;max-width:100%; height:100%" src="../../assets2/背景2.png">-->
+          <img v-if="true" style="position:relative;display:block;margin:0 auto;width: 100%;max-width:100%; height:100%" src="../../assets2/背景2.png">
 
+<!--
           <img  src="../../assets2/标题框.png" style="position: absolute;left: 0;top: 0;"/>
+-->
           <img v-if="singnalshe != 2 " src="../../assets2/测试底框（共用）.png" style="position:absolute;top: 25%;left: 24%;width: 54%;height: 52%;display:block">
           <img v-if="singnalyuan != 2 && singnalshe != 2 && singnalbu != 2 && singnalceshi != 2" src="../../assets2/系统认知首页.png" style="position:absolute;top: 33%;left: 30%;display:block;"/>
 

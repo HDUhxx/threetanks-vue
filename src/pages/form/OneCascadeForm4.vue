@@ -209,25 +209,25 @@
           <el-input v-model="kd" placeholder="kd" label="kd" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 89%;top:78%;width: 120px">
+      <v-flex style="position: absolute;left: 68%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
           <h2 style="color: white;font-size: 150%;">Kp1:</h2>
           <el-input v-model="kp1" placeholder="kp1" label="kp1" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 68%;top:88%;width: 120px">
+      <v-flex style="position: absolute;left: 75%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
           <h2 style="color: white;font-size: 150%;">Ki1:</h2>
           <el-input v-model="ki1" placeholder="ki1" label="ki1" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 75%;top:88%;width: 120px">
+      <v-flex style="position: absolute;left: 82%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
           <h2 style="color: white;font-size: 150%;">R:</h2>
           <el-input v-model="R" placeholder="R" label="R" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 82%;top:88%;width: 120px">
+      <v-flex style="position: absolute;left: 89%;top:88%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
           <h2 style="color: white;font-size: 150%;">T:</h2>
           <el-input v-model="T" placeholder="T" label="T" class="te"></el-input>
@@ -236,7 +236,10 @@
       <iframe v-if="flaghelp == true" :src="url2" frameborder="0" style="position:absolute;width: 50%; height:43%;left:25%;top: 30%"></iframe>
       <img src="../../assets2/下载.png" style="position: absolute;left: 56.5%;top: 11.3%;"/>
       <div class="px2" ref="chartOne"  style="position: absolute;left: 18%;top:10%;width: 800px;height:400px"></div>
+<!--
       <v-btn @click="dialog2 = true" style="background:	#FF8C00;z-index: 9" class="disturb">请输入干扰</v-btn>
+-->
+      <img src="../../assets2/输入干扰-蓝.png" @click="dialog2 = true" style="position: absolute;left: 89%;top: 16%;"/>
 
       <div>
         <el-slider
@@ -399,7 +402,7 @@
             bottom: 'bottom',
             textStyle: {
               color: 'white',
-              fontSize: 12
+              fontSize: 24
             }
           },
           grid: {

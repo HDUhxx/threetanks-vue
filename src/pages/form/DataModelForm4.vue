@@ -25,47 +25,47 @@
 
 
 
-        <img v-if="singnalxiang1 == 1" src="../../assets2/按钮响应曲线.png" v-on:mouseenter="changexiang11" style="position: absolute;left: 26%;top: 43%;" @click="responseChart1"/>
-        <img v-if="singnalxiang1 == 2" src="../../assets2/按钮响应曲线点击.png" v-on:mouseleave="changexiang12" style="position: absolute;left: 26%;top: 43%;" @click="responseChart1"/>
-        <img v-if="singnalnihe1 == 1" src="../../assets2/按钮曲线拟合.png" v-on:mouseenter="changenihe11"  style="position: absolute;left:36%;top: 43%;" @click=" niheChart1"/>
-        <img v-if="singnalnihe1 == 2" src="../../assets2/按钮曲线拟合点击.png" v-on:mouseleave="changenihe12" style="position: absolute;left: 36%;top: 43%;" @click=" niheChart1"/>
-        <img v-if="singnalbianshi1 == 1" src="../../assets2/按钮参数辨识.png" v-on:mouseenter="changebianshi11"  style="position: absolute;left: 46%;top: 43%;" @click="bianshiChart1"/>
-        <img v-if="singnalbianshi1 == 2" src="../../assets2/按钮参数辨识点击.png" v-on:mouseleave="changebianshi12" style="position: absolute;left: 46%;top: 43%;" @click="bianshiChart1"/>
-        <img src="../../assets2/输入框拟合.png" style="position: absolute;left: 26%;top: 52%;"/>
-        <img v-if="singnalbiaodashi1 == 2" src="../../assets2/拟合表达式1+new.png" style="position: absolute;left: 34%;top: 51%;"/>
+        <img v-if="singnalxiang1 == 1" src="../../assets2/按钮响应曲线.png" v-on:mouseenter="changexiang11" style="position: absolute;left: 26%;top: 73%;" @click="responseChart1"/>
+        <img v-if="singnalxiang1 == 2" src="../../assets2/按钮响应曲线点击.png" v-on:mouseleave="changexiang12" style="position: absolute;left: 26%;top: 73%;" @click="responseChart1"/>
+        <img v-if="singnalnihe1 == 1" src="../../assets2/按钮曲线拟合.png" v-on:mouseenter="changenihe11"  style="position: absolute;left:36%;top: 73%;" @click=" niheChart1"/>
+        <img v-if="singnalnihe1 == 2" src="../../assets2/按钮曲线拟合点击.png" v-on:mouseleave="changenihe12" style="position: absolute;left: 36%;top: 73%;" @click=" niheChart1"/>
+        <img v-if="singnalbianshi1 == 1" src="../../assets2/按钮参数辨识.png" v-on:mouseenter="changebianshi11"  style="position: absolute;left: 46%;top: 73%;" @click="bianshiChart1"/>
+        <img v-if="singnalbianshi1 == 2" src="../../assets2/按钮参数辨识点击.png" v-on:mouseleave="changebianshi12" style="position: absolute;left: 46%;top: 73%;" @click="bianshiChart1"/>
+        <img src="../../assets2/输入框拟合.png" style="position: absolute;left: 26%;top: 82%;"/>
+        <img v-if="singnalbiaodashi1 == 2" src="../../assets2/拟合表达式1+new.png" style="position: absolute;left: 34%;top: 81%;"/>
 
-      <v-flex style="position: absolute;left: 18%;top:82%;width: 120px;" >
-        <v-col cols="12" sm="6" md="3" ><h2 style="color: white;font-size: 150%;">K1:</h2>
+      <v-flex style="position: absolute;left: 65%;top:87%;width: 120px;" >
+        <v-col cols="12" sm="6" md="3" ><h2 style="color: white;font-size: 150%;"></h2>
           <el-input v-model="k1" placeholder="K1" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 25%;top:82%;width: 120px">
-        <v-col cols="12" sm="6" md="3" ><h2 style="color: white;font-size: 150%;">T1:</h2>
+      <v-flex style="position: absolute;left: 72%;top:87%;width: 120px">
+        <v-col cols="12" sm="6" md="3" ><h2 style="color: white;font-size: 150%;"></h2>
           <el-input v-model="a1" placeholder="T1" class="te"></el-input>
         </v-col>
       </v-flex>
-        <v-flex style="position: absolute;left: 32%;top:82%;width: 120px">
-          <v-col cols="12" sm="6" md="3" ><h2 style="color: white;font-size: 150%;">τ1:</h2>
+        <v-flex style="position: absolute;left: 79%;top:87%;width: 120px">
+          <v-col cols="12" sm="6" md="3" ><h2 style="color: white;font-size: 150%;"></h2>
             <el-input v-model="tao1" placeholder="T1" class="te"></el-input>
           </v-col>
         </v-flex>
 
-        <v-flex style="position: absolute;left: 80%;top:70%;width: 140px;" >
-          <v-col cols="12" sm="6" md="3" ><h4 style="color: white;font-size: 150%;">初始水位设定:</h4>
+        <v-flex style="position: absolute;left: 70%;top:70%;width: 140px;" >
+          <v-col cols="12" sm="6" md="3" ><h4 style="color: white;font-size: 150%;"></h4>
             <el-input-number style="background-color: unset" class="te" v-model="set1" controls-position="right" @change="handleChange" :min="1" :max="200"></el-input-number>
             <!--<el-input v-model="set1" class="te"></el-input>-->
           </v-col>
         </v-flex>
 
-        <img v-if="singnalsave == 1" src="../../assets2/按钮保存模型.png" v-on:mouseenter="chengesave1"  style="position: absolute;left: 42%;top: 84%;" @click="open2"/>
-        <img v-if="singnalsave == 2" src="../../assets2/按钮保存模型点击.png" v-on:mouseleave="changesave2" style="position: absolute;left: 42%;top: 84%;" @click="open2"/>
+        <img v-if="singnalsave == 1" src="../../assets2/按钮保存模型.png" v-on:mouseenter="chengesave1"  style="position: absolute;left: 86%;top: 87%;" @click="open2"/>
+        <img v-if="singnalsave == 2" src="../../assets2/按钮保存模型点击.png" v-on:mouseleave="changesave2" style="position: absolute;left: 86%;top: 87%;" @click="open2"/>
 
         <iframe v-if="flaghelp == true" :src="url2" frameborder="0" style="position:absolute;width: 50%; height:43%;left:25%;top: 30%"></iframe>
-        <img  src="../../assets2/一阶无干扰水箱.png" style="position: absolute;left: 60%;top: 9%;"/>
-        <div class="px2" ref="chartOne"  style="position: absolute;left:18%;top:12%;width: 800px;height:300px"></div>
+        <img  src="../../assets2/一阶无干扰水箱.png" style="position: absolute;left: 62%;top: 8%;"/>
+        <div class="px2" ref="chartOne"  style="position: absolute;left:18%;top:12%;width: 800px;height:600px"></div>
 
-      <img  src="../../assets2/按钮保存模型.png"  style="position: absolute;left: 78%;top: 80%;" @click="open3"/>
-      <img  src="../../assets2/按钮保存模型点击.png"  style="position: absolute;left: 78%;top: 80%;" @click="open3"/>
+<!--      <img  src="../../assets2/按钮保存模型.png"  style="position: absolute;left: 78%;top: 80%;" @click="open3"/>
+      <img  src="../../assets2/按钮保存模型点击.png"  style="position: absolute;left: 78%;top: 80%;" @click="open3"/>-->
 
     </v-layout>
   </v-container>
@@ -628,12 +628,12 @@
     methods: {
 
       open3(){
-        for (let i = 0; i < this.z.length; i++) {
+        /*for (let i = 0; i < this.z.length; i++) {
           this.z[i] = this.y[i] + this.set1;
-        }
+        }*/
       },
       open2() {
-        if (this.k1 > 0 && this.k2 > 0 && this.a1 > 0 && this.a2 > 0){
+        if (this.k1 > 0  && this.a1 > 0){
           this.$message.success("模型保存成功！");
 
         } else {
@@ -771,7 +771,9 @@
       },
 
       responseChart1(){
-
+        for (let i = 0; i < this.z.length; i++) {
+          this.z[i] = this.y[i] + this.set1;
+        }
         this.option.xAxis.data = [0,2,7,12,17,22,27,32,37,42,47,52,57,62,67,72,77,82,87,92,97,102,107,112,117,122,127,132,137,142,147,152,157,162,167,172,177,182,187,192,197,202,207,212,217,222,217,222,227,232,237,242,247,252,257,262,267,272,277,282,287,292,297,302,];
         // this.option.series[0].data=[94,94,98,102,105,108,110,112,113,116,118,122,123,126,126,128,130,131,134,135,136,137,138,139,140,141,142,143,144,144,145,145,146,146,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147,147];
         this.option.series[0].data=this.z;

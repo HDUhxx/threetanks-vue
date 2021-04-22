@@ -4,16 +4,14 @@
       <v-flex>
         <v-card >
             <img style="position:relative;display:block;margin:0 auto;width: 100%;max-width:100%; height:100%" src="../../assets2/背景2.png">
-            <img  src="../../assets2/标题框.png" style="position: absolute;left: 0;top: 0;"/>
-          <el-tooltip class="item" effect="dark" content="返回" placement="bottom-end">
-          <img v-if="singnalreturn == 1" src="../../assets2/返回.png" v-on:mouseenter="imagechangereturn1" style="position: absolute;left: 90%;top: 0;" onclick="location='/#/index/dashboard'"/>
-          <img v-if="singnalreturn == 2" src="../../assets2/返回点击.png" v-on:mouseleave="imagechangereturn2" style="position: absolute;left: 90%;top: 0;" onclick="location='/#/index/dashboard'"/>
-          </el-tooltip>
+          <img v-if="singnalreturn == 1" src="../../assets2/返回.png" v-on:mouseenter="imagechangereturn1" style="position: absolute;left: 85%;top: 0;" onclick="location='/#/index/dashboard'"/>
+          <img v-if="singnalreturn == 2" src="../../assets2/返回点击.png" v-on:mouseleave="imagechangereturn2" style="position: absolute;left: 85%;top: 0;" onclick="location='/#/index/dashboard'"/>
 
-          <el-tooltip class="item" effect="dark" content="帮助" placement="bottom-end">
-          <img v-if="singanlzhuye == 1" src="../../assets2/首页.png" v-on:mouseenter="imagechangezhuye1"  style="position: absolute;left: 95%;top: 0;" onclick="location='/#/index/dashboard'"/>
-          <img v-if="singanlzhuye == 2" src="../../assets2/首页点击.png" v-on:mouseleave="imagechangezhuye2" style="position: absolute;left: 95%;top: 0;" onclick="location='/#/index/dashboard'"/>
-          </el-tooltip>
+          <img v-if="singanlzhuye == 1" src="../../assets2/首页.png" v-on:mouseenter="imagechangezhuye1"  style="position: absolute;left: 90%;top: 0;" onclick="location='/#/index/dashboard'"/>
+          <img v-if="singanlzhuye == 2" src="../../assets2/首页点击.png" v-on:mouseleave="imagechangezhuye2" style="position: absolute;left: 90%;top: 0;" onclick="location='/#/index/dashboard'"/>
+
+          <img v-if="singnalhelp == 1" src="../../assets2/帮助.png" v-on:mouseenter="imagechangehelp1"  style="position: absolute;left: 95%;top: 0;" @click="helpclick"/>
+          <img v-if="singnalhelp == 2" src="../../assets2/帮助点击.png" v-on:mouseleave="imagechangehelp2" style="position: absolute;left: 95%;top: 0;" @click="helpclick"/>
 
           <!--<img v-if="singnal1 == 1" src="../../assets2/学习模式.png" style="position:absolute;left: 16%;top: 42%;display:block" v-on:mouseenter="imagechange11" onclick="location='/#/form/LearnForm02'">-->
           <v-btn style="position:absolute;left: 14%;top: 42%;background: unset;">
@@ -56,6 +54,7 @@
           singnal3:1,
           singnalreturn:1,
           singanlzhuye:1,
+          singnalhelp:1,
         }
       },
       methods:{
@@ -88,6 +87,15 @@
         },
         imagechangezhuye2(){
           this.singanlzhuye = 1
+        },
+        imagechangehelp1(){
+          this.singnalhelp = 2
+        },
+        imagechangehelp2(){
+          this.singnalhelp = 1
+        },
+        helpclick(){
+          this.flaghelp = !this.flaghelp;
         },
       }
     }

@@ -21,7 +21,7 @@
       <img   src="../../assets2/按钮算法设计.png" v-on:mouseleave="changetag12" style="position: absolute; left: 3%;top: 66%;" onclick="location='/#/form/write-form4'"/>
 
       <img  src="../../assets2/一阶无干扰水箱.png" style="position: absolute;left: 62%;top: 8%;"/>
-      <img  src="../../assets2/水泵.png" style="position: absolute;left: 68.3%;top: 50.8%;"/>
+      <img  id="shuibeng" src="../../assets2/水泵.png" style="position: absolute;left: 68.3%;top: 50.8%;"/>
 
       <img src="../../assets2/框图1.png" style="position: absolute;left: 15%;top:62%;"/>
 
@@ -98,7 +98,7 @@
 
       <img src="../../assets2/下载.png" style="position: absolute;left: 56.5%;top: 11.3%;"/>
 
-      <div class="px2" ref="chartOne"  style="position: absolute;left: 18%;top:10%;width: 800px;height:400px"></div>
+      <div class="px2" ref="chartOne"  style="position: absolute;left: 16%;top:12%;width: 800px;height:400px"></div>
       <div>
           <el-slider
             style="position: absolute;left: 83.5%;top: 25%;height: 120px;width: 50px;"
@@ -128,7 +128,6 @@
       <span v-show="timesT>1" style="position:absolute;left:63.5%;top: 40%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
       <span v-show="timesT>1" style="position:absolute;left:63.5%;top: 39%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
 
-
       <span v-show="timesT>3" style="position:absolute;left:63.5%;top: 30%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
       <span v-show="timesT>3" style="position:absolute;left:63.5%;top: 28%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
       <span v-show="timesT>3" style="position:absolute;left:63.5%;top: 26%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
@@ -154,6 +153,25 @@
 
       <span v-show="timesT>7" style="position:absolute;left:84.5%;top: 14.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>
 
+<!--      <img  src="../../assets2/一阶无干扰水箱.png" style="position: absolute;left: 62%;top: 8%;"/>
+      <img  id="shuibeng" src="../../assets2/水泵.png" style="position: absolute;left: 68.3%;top: 50.8%;"/>-->
+
+      <!--<div id="circle1" class="circle" style="position:relative;top:-3693px;left:265px">
+      </div>
+      <div id="circle2" class="circle" style="position:relative;top:-3715px;left:358px">
+      </div>
+      <div id="circle3" class="circle" style="position:relative;top:-3712px;left:492px">
+      </div>
+      <div id="circle4" class="circle" style="position:relative;top:-3732px;left:588px">
+      </div>
+      <div id="circle5" class="circle" style="position:relative;top:-3726px;left:725px">
+      </div>
+      <div id="circle6" class="circle" style="position:relative;top:-3747px;left:810px">
+      </div>
+      <div id="circle7" class="circle" style="position:relative;top:-3437px;left:107px">
+      </div>
+      <div id="circle8" class="circle" style="position:relative;top:-3443px;left:935px">
+      </div>-->
     </v-layout>
   </v-container>
 </template>
@@ -244,7 +262,7 @@
               bottom: 'bottom',
               textStyle: {
                 color: 'white',
-                fontSize: 18
+                fontSize: 24
               }
             },
             grid: {
@@ -256,6 +274,13 @@
               containLabel: true
             },
             xAxis: {
+              boundaryGap: ['15%', '15%'],//留白大小，坐标轴两边留白
+
+              name:'时间/s',
+              nameTextStyle : {
+                color: 'white',
+                fontSize: 24
+              },
               type: 'category',
               data: [''],
               axisLine: {
@@ -272,9 +297,15 @@
 
             },
             yAxis: {
-              type: 'value',
+
               //min: -500,
               //max:500,
+              name:'液位/mm',
+              nameTextStyle : {
+                color: 'white',
+                fontSize: 24,
+              },
+              type: 'value',
               splitLine: {
                 lineStyle: {
                   type: 'dashed',
@@ -282,6 +313,7 @@
                 }
               },
               axisLabel: {
+
                 show: true,
                 textStyle: {
                   color: 'white'
@@ -292,9 +324,6 @@
                 lineStyle: {
                   color: "#333"
                 },
-              },
-              nameTextStyle: {
-                color: "#999"
               },
               splitArea: {
                 show: false
@@ -595,9 +624,29 @@
       mounted(){
         this.initChartOne();
         this.k1 = this.push.params.k1;
+
       },
+      /*created(){
+        this.$nextTick(()=>{
+          setTimeout(()=>{
+            this.initChartOne()
+          },20)
+        })
+      },*/
       methods: {
 
+        /**
+         * 小轮子转
+         */
+        circle(id) {
+          var current = 0;
+          function zhuan(){
+            var cr1 = document.getElementById(id);
+            current = (current+10)%360;
+            cr1.style.transform = 'rotate('+current+'deg)';
+          }
+          this.timer = setInterval(zhuan,40)
+        },
         imagechangereturn1(){
           this.singnalreturn = 2
         },
@@ -786,6 +835,7 @@
               resp.data.data.result[3].unshift(0);
               resp.data.data.result[4].unshift(0);
               resp.data.data.result[5].unshift(0);
+              this.circle('shuibeng');
                 this.clearTimeSet=window.setInterval(() => {
                   // this.showData(resp.data.data.result)
                   setTimeout(this.showData(resp.data.data.result), 0);
@@ -959,7 +1009,7 @@
 
         //停止实验
         stopLab(){
-
+          clearInterval(this.timer);
           this.singnalstart = 1;
           this.singnalpause = 3;
           this.singnalcontinue = 3;
@@ -981,6 +1031,7 @@
         },
         //暂停实验
         pauseLab(){
+          clearInterval(this.timer);
           this.singnalcontinue = 1;
           this.singnalstart = 3;
           this.singnalpause = 3;
@@ -994,6 +1045,7 @@
           this.$message.success("删除成功");
         },
         continueLab () {
+          this.circle('shuibeng');//转轮子
           this.flag = true;
           this.singnalstart = 3;
           this.singnalpause = 1;
@@ -1080,5 +1132,14 @@
     height: auto;
     border-radius: 0 0 3px 3px;
   }
-
+  .circle{
+    width: 8px;
+    height: 8px;
+    /*line-height: 100px;*/
+    /*text-align: center;*/
+    /*margin: 100px;*/
+    background-color: red;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
 </style>

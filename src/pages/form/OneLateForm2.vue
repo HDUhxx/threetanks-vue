@@ -91,9 +91,11 @@
         </v-col>
       </v-flex>
 
+<!--
       <el-checkbox v-model="checked"  style="position: absolute;left: 82%;top: 90%;" class=" te">
         <h2 style="color: white;font-size: 150%;">Smith预估控制器</h2>
       </el-checkbox>
+-->
 
 
       <iframe v-if="flaghelp == true" :src="url2" frameborder="0" style="position:absolute;width: 50%; height:43%;left:25%;top: 30%"></iframe>
@@ -235,12 +237,12 @@
           },
           legend: {
             color: ["#47D8BE", "#F9A589","#00ff00"],
-            data: ['加Smith', '不加Smith','设定值'],
+            data: ['加斯密斯', '不加斯密斯','设定值'],
             left: 'center',
             bottom: 'bottom',
             textStyle: {
               color: 'white',
-              fontSize: 12
+              fontSize: 24
             },
           },
           grid: {
@@ -297,7 +299,7 @@
           series: [
             {
               symbol: "none",
-              name: '加Smith',
+              name: '加斯密斯',
               type: 'line',
               data: [0],
               lineStyle: {
@@ -337,7 +339,7 @@
             },
             {
               symbol: "none",
-              name: '不加Smith',
+              name: '不加斯密斯',
               type: 'line',
               data: [0,0,0,0,0],
               lineStyle: {
@@ -640,13 +642,15 @@
           this.value=resp[0][i];
         }
         this.option.xAxis.data = this.xData;
-        if (!this.checked) {
+        /*if (!this.checked) {
           this.option.series[0].data=[];
           this.option.series[1].data=resp[1];
         }else {
           this.option.series[0].data=resp[0];
           this.option.series[1].data=[];
-        }
+        }*/
+        this.option.series[0].data=resp[0];
+        this.option.series[1].data=resp[1];
 
         this.option.series[2].data=this.setData;
         this.xData=[];

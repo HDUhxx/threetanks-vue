@@ -48,7 +48,7 @@
       <img src="../../assets2/下载.png" style="position: absolute;left: 95.2%;top: 13.3%;"/>
       <div class="px2" ref="chartOne"  style="position: absolute;left: 63%;top:13%;width: 650px;height:360px"></div>
       <img src="../../assets2/底座.png" style="position: absolute;left: 66%;top: 80%;"/>
-      <img src="../../assets2/算法编写底座上.png" style="position: absolute;left: 70%;top: 60%;"/>
+      <img src="../../assets2/算法编写底座上.png" style="position: absolute;left: 70%;top: 65%;"/>
     </v-layout>
   </v-container>
 </template>
@@ -198,7 +198,7 @@ public class Solution {
               bottom: 'bottom',
               textStyle: {
                 color: 'white',
-                fontSize: 12
+                fontSize: 24
               }
             },
             grid: {

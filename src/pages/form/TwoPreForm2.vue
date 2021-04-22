@@ -270,7 +270,11 @@
       <img src="../../assets2/下载.png" style="position: absolute;left: 56.5%;top: 11.3%;"/>
       <div class="px2" ref="chartOne"  style="position: absolute;left: 18%;top:10%;width: 800px;height:400px"></div>
 
+<!--
       <v-btn @click="dialog1 = true" style="background: #FF8C00;z-index: 9" class="disturb2">请输入干扰N</v-btn>
+-->
+      <img src="../../assets2/输入干扰-蓝.png" @click="dialog1 = true" style="position: absolute;left: 89%;top: 16%;"/>
+
 
       <div>
         <el-slider
@@ -440,7 +444,7 @@
             bottom: 'bottom',
             textStyle: {
               color: 'white',
-              fontSize: 12
+              fontSize: 24
             },
           },
           grid: {

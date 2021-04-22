@@ -3,7 +3,6 @@
     <v-layout row wrap >
 
       <img style="position:relative;display:block;margin:0 auto;width: 100%;max-width:100%; height:100%" src="../../assets2/背景2.png">
-      <img  src="../../assets2/标题框.png" style="position: absolute;left: 0;top: 0;"/>
       <img v-if="singnalreturn == 1" src="../../assets2/返回.png" v-on:mouseenter="imagechangereturn1" style="position: absolute;left: 90%;top: 0;" onclick="location='/#/form/ModelSelect'"/>
       <img v-if="singnalreturn == 2" src="../../assets2/返回点击.png" v-on:mouseleave="imagechangereturn2" style="position: absolute;left: 90%;top: 0;" onclick="location='/#/form/ModelSelect'"/>
       <img v-if="singanlzhuye == 1" src="../../assets2/首页.png" v-on:mouseenter="imagechangezhuye1"  style="position: absolute;left: 95%;top: 0;" onclick="location='/#/index/dashboard'"/>
