@@ -1,7 +1,7 @@
 <template xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
   <v-container fluid grid-list-md >
     <v-layout row wrap >
-      <img style="position:relative;display:block;margin:0 auto;width: 100%;max-width:100%; height:100%" src="../../assets2/底框实验.png">
+      <img style="position:relative;display:block;margin:0 auto;width: 100%;max-width:100%; height:100%" src="../../assets2/底框串级.png">
 
       <img v-if="singnalreturn == 1" src="../../assets2/返回.png" v-on:mouseenter="imagechangereturn1" style="position: absolute;left: 85%;top: 0;" onclick="location='/#/form/ModelSelect'"/>
       <img v-if="singnalreturn == 2" src="../../assets2/返回点击.png" v-on:mouseleave="imagechangereturn2" style="position: absolute;left: 85%;top: 0;" onclick="location='/#/form/ModelSelect'"/>
@@ -25,27 +25,33 @@
       <img src="../../assets2/框图2.png" style="position: absolute;left: 14.5%;top:60%;"/>
 
       <img v-if="false" src="../../assets2/公式1+tao.png" style="position: absolute;left: 69%;top: 57%;"/>
-      <v-flex style="position: absolute;left: 67%;top:63%;width: 120px;">
+      <v-flex style="position: absolute;left: 70%;top:71%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">K1:</h2>
+-->
           <el-input v-model="k1" placeholder="k1" label="k1" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 74%;top:63%;width: 120px;">
+      <v-flex style="position: absolute;left: 76.5%;top:71%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">T1:</h2>
+-->
           <el-input v-model="a1" placeholder="a1" label="a1" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 81%;top:63%;width: 120px;">
+      <v-flex style="position: absolute;left: 82.5%;top:71%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">τ1:</h2>
+-->
           <el-input v-model="ta" placeholder="τ" class="te"></el-input>
         </v-col>
       </v-flex>
 
-      <img v-if="singnalchuang == 1" v-on:mouseenter="changechuang1" @click="modelSub" src="../../assets2/按钮创建模型.png" style="position: absolute;left: 89%;top:65%;"/>
-      <img v-if="singnalchuang == 2" v-on:mouseleave="changechuang2" @click="modelSub" src="../../assets2/按钮创建模型点击.png" style="position: absolute;left:89%;top:65%;"/>
+      <img v-if="singnalchuang == 1" v-on:mouseenter="changechuang1" @click="modelSub" src="../../assets2/按钮创建模型.png" style="position: absolute;left: 86%;top:67%;"/>
+      <img v-if="singnalchuang == 2" v-on:mouseleave="changechuang2" @click="modelSub" src="../../assets2/按钮创建模型点击.png" style="position: absolute;left:86%;top:67%;"/>
 
       <img v-if="singnalstart == 1" v-on:mouseenter="changestart1" @click="startLab" src="../../assets2/按钮开始实验.png" style="position: absolute;left: 22%;top:50%"/>
       <img v-if="singnalstart == 2" v-on:mouseleave="changestart2" @click="startLab" src="../../assets2/按钮开始实验点击.png" style="position: absolute;left:22%;top:50%"/>
@@ -191,45 +197,51 @@
           </v-card-text>
         </v-card>
       </v-dialog>
-      <v-flex style="position: absolute;left: 68%;top:78%;width: 120px">
+      <v-flex style="position: absolute;left: 70%;top:84%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">Kp:</h2>
+-->
           <el-input v-model="kp" placeholder="kp" label="kp" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 75%;top:78%;width: 120px">
+      <v-flex style="position: absolute;left: 76%;top:84%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">Ki:</h2>
+-->
           <el-input v-model="ki" placeholder="ki" label="ki" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 82%;top:78%;width: 120px">
+      <v-flex style="position: absolute;left: 82%;top:84%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">Kd:</h2>
+-->
           <el-input v-model="kd" placeholder="kd" label="kd" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 68%;top:88%;width: 120px">
+      <v-flex style="position: absolute;left: 70%;top:91%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;font-size: 150%;">Kp1:</h2>
+          <!--<h2 style="color: white;font-size: 150%;">Kp1:</h2>-->
           <el-input v-model="kp1" placeholder="kp1" label="kp1" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 75%;top:88%;width: 120px">
+      <v-flex style="position: absolute;left: 76%;top:91%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;font-size: 150%;">Ki1:</h2>
+          <!--<h2 style="color: white;font-size: 150%;">Ki1:</h2>-->
           <el-input v-model="ki1" placeholder="ki1" label="ki1" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 82%;top:88%;width: 120px">
+      <v-flex style="position: absolute;left: 87%;top:84%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;font-size: 150%;">R:</h2>
+          <!--<h2 style="color: white;font-size: 150%;">R:</h2>-->
           <el-input v-model="R" placeholder="R" label="R" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 89%;top:88%;width: 120px">
+      <v-flex style="position: absolute;left: 87%;top:91%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
-          <h2 style="color: white;font-size: 150%;">T:</h2>
+          <!--<h2 style="color: white;font-size: 150%;">T:</h2>-->
           <el-input v-model="T" placeholder="T" label="T" class="te"></el-input>
         </v-col>
       </v-flex>
@@ -823,10 +835,10 @@
 
   .te>>>input
   {
+    width: 80px;
     color:white;
     background-color: unset;
     font-size:20px !important;
-
   }
 
   .disturb{

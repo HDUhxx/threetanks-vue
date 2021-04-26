@@ -1,7 +1,7 @@
 <template xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
   <v-container fluid grid-list-md >
     <v-layout row wrap >
-      <img style="position:relative;display:block;margin:0 auto;width: 100%;max-width:100%; height:100%" src="../../assets2/底框实验.png">
+      <img style="position:relative;display:block;margin:0 auto;width: 100%;max-width:100%; height:100%" src="../../assets2/底框pid.png">
 
       <img v-if="singnalreturn == 1" src="../../assets2/返回.png" v-on:mouseenter="imagechangereturn1" style="position: absolute;left: 85%;top: 0;" onclick="location='/#/form/ModelSelect'"/>
       <img v-if="singnalreturn == 2" src="../../assets2/返回点击.png" v-on:mouseleave="imagechangereturn2" style="position: absolute;left: 85%;top: 0;" onclick="location='/#/form/ModelSelect'"/>
@@ -20,36 +20,42 @@
       <img  src="../../assets2/按钮复杂控制.png" v-on:mouseleave="changetag52" style="position: absolute; left: 3%;top: 60%;" onclick="location='/#/form/two-cascade-form4'"/>
       <img   src="../../assets2/按钮算法设计.png" v-on:mouseleave="changetag12" style="position: absolute; left: 3%;top: 66%;" onclick="location='/#/form/write-form4'"/>
 
-      <img  src="../../assets2/一阶无干扰水箱.png" style="position: absolute;left: 62%;top: 8%;"/>
-      <img  id="shuibeng" src="../../assets2/水泵.png" style="position: absolute;left: 68.3%;top: 50.8%;"/>
 
+      <!--<img  src="../../assets2/一阶无干扰水箱.png" style="position: absolute;left: 62%;top: 8%;"/>
+      <img  id="shuibeng" src="../../assets2/水泵.png" style="position: absolute;left: 68.3%;top: 50.8%;"/>-->
       <img src="../../assets2/框图1.png" style="position: absolute;left: 15%;top:62%;"/>
 
       <img v-if="false" src="../../assets2/公式1+tao.png" style="position: absolute;left: 69%;top: 58%;"/>
 
-      <v-flex style="position: absolute;left: 67%;top:63%;width: 120px;">
+      <v-flex style="position: absolute;left: 67.5%;top:70%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">K1:</h2>
+-->
           <el-input v-model="k1" placeholder="k1" label="k1" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 74%;top:63%;width: 120px;">
+      <v-flex style="position: absolute;left: 74%;top:70%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">T1:</h2>
+-->
           <el-input v-model="a1" placeholder="a1" label="a1" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 81%;top:63%;width: 120px">
+      <v-flex style="position: absolute;left: 80%;top:70%;width: 120px">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">τ1:</h2>
+-->
           <el-input v-model="tao" placeholder="τ1" class="te"></el-input>
         </v-col>
       </v-flex>
 
 
 
-      <img v-if="singnalchuang == 1" v-on:mouseenter="changechuang1" @click="modelSub" src="../../assets2/按钮创建模型.png" style="position: absolute;left: 89%;top:65%"/>
-      <img v-if="singnalchuang == 2" v-on:mouseleave="changechuang2" @click="modelSub" src="../../assets2/按钮创建模型点击.png" style="position: absolute;left:89%;top:65%"/>
+      <img v-if="singnalchuang == 1" v-on:mouseenter="changechuang1" @click="modelSub" src="../../assets2/按钮创建模型.png" style="position: absolute;left: 86%;top:70%"/>
+      <img v-if="singnalchuang == 2" v-on:mouseleave="changechuang2" @click="modelSub" src="../../assets2/按钮创建模型点击.png" style="position: absolute;left:86%;top:70%"/>
 
       <img v-if="singnalstart == 1" v-on:mouseenter="changestart1" @click="startLab" src="../../assets2/按钮开始实验.png" style="position: absolute;left: 22%;top:50%"/>
       <img v-if="singnalstart == 2" v-on:mouseleave="changestart2" @click="startLab" src="../../assets2/按钮开始实验点击.png" style="position: absolute;left:22%;top:50%"/>
@@ -61,33 +67,43 @@
       <img v-if="singnalstop == 2" v-on:mouseleave="changestop2" @click="stopLab" src="../../assets2/按钮停止实验点击.png" style="position: absolute;left: 45%;top:50%"/>
 
 
-      <v-flex style="position: absolute;left: 69%;top:77.5%;width: 120px;">
+      <v-flex style="position: absolute;left: 68%;top:83.5%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">Kp:</h2>
+-->
           <el-input v-model="kp" placeholder="kp" label="kp" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 79%;top:77.5%;width: 120px;">
+      <v-flex style="position: absolute;left: 75%;top:83.5%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">Ki:</h2>
+-->
           <el-input v-model="ki" placeholder="ki" label="ki" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 89%;top:77.5%;width: 120px;">
+      <v-flex style="position: absolute;left: 82.5%;top:83.5%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">Kd:</h2>
+-->
           <el-input v-model="kd" placeholder="kd" label="kd" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 79%;top:85%;width: 120px;">
+      <v-flex style="position: absolute;left: 71%;top:89%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">R:</h2>
+-->
           <el-input v-model="R" placeholder="R" label="R" class="te" oninput="if(value>200)value=200"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 69%;top:85%;width: 120px;">
+      <v-flex style="position: absolute;left: 82%;top:89%;width: 120px;">
         <v-col cols="12" sm="6" md="3" >
+<!--
           <h2 style="color: white;font-size: 150%;">T:</h2>
+-->
           <el-input v-model="T" placeholder="T" label="T" class="te"></el-input>
         </v-col>
       </v-flex>
@@ -115,46 +131,62 @@
         </v-col>
       </v-flex>
 
-      <span v-show="timesT>0" style="position:absolute;left: 66.3%;top: 50.9%;font-size:30px;line-height:30px; color:#4cb9fc"> ▃</span>
-      <span v-show="timesT>0" style="position:absolute;left: 64.9%;top: 50.9%;font-size:34px;line-height:30px; color:#4cb9fc"> ▃</span>
+      <span  style="position:absolute;left: 66.3%;top: 50.9%;font-size:30px;line-height:30px; color:#4cb9fc"> ▃</span>
+      <span  style="position:absolute;left: 64.9%;top: 50.9%;font-size:34px;line-height:30px; color:#4cb9fc"> ▃</span>
+<!--
+      <span v-show="timesT>0&& timesT%2 == 0" style="position:absolute;left:63.9%;top: 52.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:17px;line-height:0px;">▊</span>
+      <span v-show="timesT>0" style="position:absolute;left:64.1%;top: 52.5%;color:#102b6a; display:block; margin:0; padding:0; text-indent:1em; font-size:17px;line-height:0px;">▊</span>-->
+      <span v-show=" timesT%2 == 0" style="position:absolute;left:63.6%;top: 50%;color:#102b6a; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span  style="position:absolute;left:63.6%;top: 48%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT%2 == 0" style="position:absolute;left:63.6%;top: 46%;color:#102b6a; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span style="position:absolute;left:63.6%;top: 44%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show=" timesT%2 == 0" style="position:absolute;left:63.6%;top: 42%;color:#102b6a; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span  style="position:absolute;left:63.6%;top: 40%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT%2 == 0" style="position:absolute;left:63.6%;top: 38%;color:#102b6a; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span style="position:absolute;left:63.6%;top: 36%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show=" timesT%2 == 0" style="position:absolute;left:63.6%;top: 34%;color:#102b6a; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span  style="position:absolute;left:63.6%;top: 32%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show=" timesT%2 == 0" style="position:absolute;left:63.6%;top: 30%;color:#102b6a; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
 
-      <span v-show="timesT>0" style="position:absolute;left:63.9%;top: 52.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:17px;line-height:0px;">▊</span>
-      <span v-show="timesT>0" style="position:absolute;left:64.1%;top: 52.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:17px;line-height:0px;">▊</span>
 
-      <span v-show="timesT>0" style="position:absolute;left:63.5%;top: 48.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>0" style="position:absolute;left:63.5%;top: 46%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>0" style="position:absolute;left:63.5%;top: 44%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>1" style="position:absolute;left:63.5%;top: 42%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>1" style="position:absolute;left:63.5%;top: 40%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>1" style="position:absolute;left:63.5%;top: 39%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span style="position:absolute;left:63.6%;top: 28%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show="timesT%2 == 0" style="position:absolute;left:63.6%;top: 26%;color:#102b6a; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span  style="position:absolute;left:63.6%;top: 24%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show=" timesT%2 == 0" style="position:absolute;left:63.6%;top: 22%;color:#102b6a; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span  style="position:absolute;left:63.6%;top: 20%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show=" timesT%2 == 0" style="position:absolute;left:63.6%;top: 18%;color:#102b6a; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span  style="position:absolute;left:63.6%;top: 16%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
 
-      <span v-show="timesT>3" style="position:absolute;left:63.5%;top: 30%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>3" style="position:absolute;left:63.5%;top: 28%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>3" style="position:absolute;left:63.5%;top: 26%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>4" style="position:absolute;left:63.5%;top: 24%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>4" style="position:absolute;left:63.5%;top: 22%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>4" style="position:absolute;left:63.5%;top: 20%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>5" style="position:absolute;left:63.5%;top: 18%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>5" style="position:absolute;left:63.5%;top: 17%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
-      <span v-show="timesT>5" style="position:absolute;left:63.9%;top: 14%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:17px;line-height:30px;">▊</span>
-      <span v-show="timesT>5" style="position:absolute;left:64.2%;top: 14%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:17px;line-height:30px;">▊</span>
 
-      <span v-show="timesT>5" style="position:absolute;left:65%;top: 12%;font-size:30px; color:#4cb9fc">▃</span>
-      <span v-show="timesT>6" style="position:absolute;left:66.3%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃</span>
-      <span v-show="timesT>6" style="position:absolute;left:68%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃▃</span>
-      <span v-show="timesT>6" style="position:absolute;left:71%;top: 12%;font-size:30px; color:#4cb9fc">▃</span>
-      <span v-show="timesT>6" style="position:absolute;left:72.4%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃</span>
 
-      <span v-show="timesT>7" style="position:absolute;left:74%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃▃</span>
-      <span v-show="timesT>7" style="position:absolute;left:77%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃▃</span>
-      <span v-show="timesT>7" style="position:absolute;left:80%;top: 12%;font-size:30px; color:#4cb9fc">▃▃▃▃▃</span>
-      <span v-show="timesT>7" style="position:absolute;left:85%;top: 12%;font-size:30px; color:#4cb9fc">▃</span>
-      <span v-show="timesT>7" style="position:absolute;left:85.5%;top: 12%;font-size:30px; color:#4cb9fc">▃</span>
 
-      <span v-show="timesT>7" style="position:absolute;left:84.5%;top: 14.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>
 
-<!--      <img  src="../../assets2/一阶无干扰水箱.png" style="position: absolute;left: 62%;top: 8%;"/>
-      <img  id="shuibeng" src="../../assets2/水泵.png" style="position: absolute;left: 68.3%;top: 50.8%;"/>-->
+      <span style="position:absolute;left:65.5%;top: 11.8%;font-size:30px; color:#4cb9fc">▃</span>
+      <span v-show=" timesT%2 == 0" style="position:absolute;left:63.6%;top: 14%;color:#102b6a; display:block; margin:0; padding:0; text-indent:1em; font-size:25px;line-height:30px;">▊</span>
+      <span v-show=" timesT%2 == 0" style="position:absolute;left:66.5%;top: 11.8%;font-size:30px; color:#102b6a">▃▃</span>
+      <span  style="position:absolute;left:67.5%;top: 11.8%;font-size:30px; color:#4cb9fc">▃▃</span>
+      <span v-show=" timesT%2 == 0" style="position:absolute;left:69%;top: 11.8%;font-size:30px; color:#102b6a">▃▃</span>
+      <span  style="position:absolute;left:70.5%;top: 11.8%;font-size:30px; color:#4cb9fc">▃▃</span>
+
+      <span v-show=" timesT%2 == 0" style="position:absolute;left:72%;top: 11.8%;font-size:30px; color:#102b6a">▃▃</span>
+      <span  style="position:absolute;left:73.5%;top: 11.8%;font-size:30px; color:#4cb9fc">▃▃</span>
+      <span v-show="timesT%2 == 0" style="position:absolute;left:75%;top: 11.8%;font-size:30px; color:#102b6a">▃▃</span>
+      <span  style="position:absolute;left:76.5%;top: 11.8%;font-size:30px; color:#4cb9fc">▃▃</span>
+      <span v-show="timesT%2 == 0" style="position:absolute;left:78%;top: 11.8%;font-size:30px; color:#102b6a">▃▃</span>
+
+      <span  style="position:absolute;left:79.5%;top: 11.8%;font-size:30px; color:#4cb9fc">▃▃</span>
+      <span v-show=" timesT%2 == 0" style="position:absolute;left:81%;top: 11.8%;font-size:30px; color:#102b6a">▃▃</span>
+      <span  style="position:absolute;left:82.5%;top: 11.8%;font-size:30px; color:#4cb9fc">▃▃</span>
+      <span v-show="timesT%2 == 0" style="position:absolute;left:84%;top: 11.8%;font-size:30px; color:#102b6a">▃▃</span>
+
+      <span style="position:absolute;left:84.5%;top: 14.5%;color:#102b6a; display:block; margin:0; padding:0; text-indent:1em; font-size:30px;line-height:40px;">▊</span>
+      <span  style="position:absolute;left:85.4%;top: 11.8%;font-size:30px; color:#4cb9fc">▃</span>
+
+      <span style="position:absolute;left:85.1%;top: 38.5%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:20px;line-height:16px;">▊</span>
+      <span style="position:absolute;left:85.1%;top: 43.7%;color:#4cb9fc; display:block; margin:0; padding:0; text-indent:1em; font-size:20px;line-height:16px;">▊</span>
+
+      <img  src="../../assets2/一阶无干扰水箱.png" style="position: absolute;left: 62%;top: 8%;"/>
+      <img  id="shuibeng" src="../../assets2/水泵.png" style="position: absolute;left: 68.3%;top: 50.8%;"/>
 
       <!--<div id="circle1" class="circle" style="position:relative;top:-3693px;left:265px">
       </div>
@@ -829,12 +861,12 @@
               this.res = resp;
               this.flag = true;
               this.signalwater = 3;
-              resp.data.data.result[0].unshift(0);
+              /*resp.data.data.result[0].unshift(0);
               resp.data.data.result[1].unshift(0);
               resp.data.data.result[2].unshift(0);
               resp.data.data.result[3].unshift(0);
               resp.data.data.result[4].unshift(0);
-              resp.data.data.result[5].unshift(0);
+              resp.data.data.result[5].unshift(0);*/
               this.circle('shuibeng');
                 this.clearTimeSet=window.setInterval(() => {
                   // this.showData(resp.data.data.result)

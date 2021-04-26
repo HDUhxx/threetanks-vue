@@ -34,31 +34,31 @@
         <img src="../../assets2/输入框拟合.png" style="position: absolute;left: 26%;top: 82%;"/>
         <img v-if="singnalbiaodashi1 == 2" src="../../assets2/拟合表达式1+new.png" style="position: absolute;left: 34%;top: 81%;"/>
 
-      <v-flex style="position: absolute;left: 65%;top:87%;width: 120px;" >
+      <v-flex style="position: absolute;left: 70%;top:87%;width: 120px;" >
         <v-col cols="12" sm="6" md="3" ><h2 style="color: white;font-size: 150%;"></h2>
           <el-input v-model="k1" placeholder="K1" class="te"></el-input>
         </v-col>
       </v-flex>
-      <v-flex style="position: absolute;left: 72%;top:87%;width: 120px">
+      <v-flex style="position: absolute;left: 76%;top:87%;width: 120px">
         <v-col cols="12" sm="6" md="3" ><h2 style="color: white;font-size: 150%;"></h2>
           <el-input v-model="a1" placeholder="T1" class="te"></el-input>
         </v-col>
       </v-flex>
-        <v-flex style="position: absolute;left: 79%;top:87%;width: 120px">
+        <v-flex style="position: absolute;left: 82%;top:87%;width: 120px">
           <v-col cols="12" sm="6" md="3" ><h2 style="color: white;font-size: 150%;"></h2>
             <el-input v-model="tao1" placeholder="T1" class="te"></el-input>
           </v-col>
         </v-flex>
 
-        <v-flex style="position: absolute;left: 70%;top:70%;width: 140px;" >
+        <v-flex style="position: absolute;left: 67%;top:70%;width: 140px;" >
           <v-col cols="12" sm="6" md="3" ><h4 style="color: white;font-size: 150%;"></h4>
             <el-input-number style="background-color: unset" class="te" v-model="set1" controls-position="right" @change="handleChange" :min="1" :max="200"></el-input-number>
             <!--<el-input v-model="set1" class="te"></el-input>-->
           </v-col>
         </v-flex>
 
-        <img v-if="singnalsave == 1" src="../../assets2/按钮保存模型.png" v-on:mouseenter="chengesave1"  style="position: absolute;left: 86%;top: 87%;" @click="open2"/>
-        <img v-if="singnalsave == 2" src="../../assets2/按钮保存模型点击.png" v-on:mouseleave="changesave2" style="position: absolute;left: 86%;top: 87%;" @click="open2"/>
+        <img v-if="singnalsave == 1" src="../../assets2/按钮保存模型.png" v-on:mouseenter="chengesave1"  style="position: absolute;left: 86%;top: 81%;" @click="open2"/>
+        <img v-if="singnalsave == 2" src="../../assets2/按钮保存模型点击.png" v-on:mouseleave="changesave2" style="position: absolute;left: 86%;top: 81%;" @click="open2"/>
 
         <iframe v-if="flaghelp == true" :src="url2" frameborder="0" style="position:absolute;width: 50%; height:43%;left:25%;top: 30%"></iframe>
         <img  src="../../assets2/一阶无干扰水箱.png" style="position: absolute;left: 62%;top: 8%;"/>
@@ -852,6 +852,7 @@
     color:white;
     background-color: unset;
     font-size:20px !important;
+    width: 100px;
 
   }
 </style>
